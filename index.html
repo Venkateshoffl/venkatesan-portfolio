@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Venkatesan K | Java Full Stack Developer & UI Designer Portfolio</title>
+  <meta name="description" content="Explore the premium portfolio of Venkatesan K, a passionate Junior Software Developer specializing in Java Full Stack, React JS, Python, Flask, SQL, and UI/UX design tools.">
+  <meta name="keywords" content="Venkatesan K, Java Full Stack, Frontend Developer, UI Designer, React, Python, Flask, Portfolio, Chennai Developer">
+  <meta name="author" content="Venkatesan K">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Venkatesan K | Developer Portfolio">
+  <meta property="og:description" content="Futuristic, premium portfolio website showing engineering and UI/UX designs.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mohansvenkat.dev">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="index.css">
+  
+  <!-- FontAwesome 6 CDN for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+
+
+  <!-- Three.js Canvas Container (For interactive 3D particle spheres in background) -->
+  <div id="bg-canvas-container"></div>
+
+  <!-- Ambient Blobs Fallback -->
+  <div class="ambient-blobs">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <!-- ==========================================================================
+     NAVIGATION BAR
+     ========================================================================== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#home" class="logo" id="nav-logo">
+        <span>&lt;</span>VK.<span>/&gt;</span>
+      </a>
+      
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#journey" class="nav-link">Journey</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li class="nav-cta">
+          <a href="VENKATESAN_RESUME.pdf" download="VENKATESAN_RESUME.pdf" class="btn btn-primary" id="nav-btn-resume">
+            <i class="fa-solid fa-cloud-arrow-down"></i> Resume
+          </a>
+        </li>
+      </ul>
+      
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Navigation Menu">
+        <i class="fa-solid fa-bars-staggered"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ==========================================================================
+     HERO SECTION
+     ========================================================================== -->
+  <header class="hero section" id="home">
+    <div class="container">
+      <div class="hero-grid">
+        
+        <!-- Left Column: Typography -->
+        <div class="hero-content">
+          <div class="hero-tag fade-up">
+            <div class="pulse-dot"></div>
+            <span>Available for Hire & Internships</span>
+          </div>
+          
+          <h1 class="hero-title fade-up">
+            Hi, I'm <span class="gradient-text">Venkatesan K</span>
+          </h1>
+          
+          <!-- Typing effect container -->
+          <div class="hero-typed fade-up">
+            <span class="static-prefix">I am a </span>
+            <span class="gradient-text-purple" id="typing-element"></span>
+          </div>
+          
+          <p class="hero-desc fade-up">
+            A junior software engineer translating complex code into beautiful digital realities. Specializing in robust backend systems with Java & SQL and building immersive user experiences using React and modern CSS.
+          </p>
+          
+          <div class="hero-actions fade-up">
+            <a href="VENKATESAN_RESUME.pdf" download="VENKATESAN_RESUME.pdf" class="btn btn-primary magnet-btn" id="hero-btn-download">
+              <i class="fa-solid fa-file-pdf"></i> Download Resume
+            </a>
+            <a href="#projects" class="btn btn-secondary magnet-btn" id="hero-btn-projects">
+              View Projects
+            </a>
+            <a href="#contact" class="btn btn-tertiary magnet-btn" id="hero-btn-contact">
+              Contact Me <i class="fa-solid fa-arrow-trend-up"></i>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Right Column: Visual Container -->
+        <div class="hero-visual fade-up">
+          <div class="profile-container">
+            <div class="profile-glow"></div>
+            <div class="profile-card" id="profile-card">
+              <img src="assets/profile.jpg" alt="Venkatesan K Profile Photo">
+            </div>
+            
+            <!-- Floating glass widgets -->
+            <div class="floating-widget glass-panel widget-1">
+              <div class="widget-icon">
+                <i class="fa-brands fa-java"></i>
+              </div>
+              <div>
+                <p style="color: var(--color-text-muted); font-size: 0.7rem; text-transform: uppercase;">Core Expert</p>
+                <p style="margin: 0; font-size: 0.85rem;">Java Developer</p>
+              </div>
+            </div>
+            
+            <div class="floating-widget glass-panel widget-2">
+              <div class="widget-icon">
+                <i class="fa-solid fa-bezier-curve"></i>
+              </div>
+              <div>
+                <p style="color: var(--color-text-muted); font-size: 0.7rem; text-transform: uppercase;">Visual UX</p>
+                <p style="margin: 0; font-size: 0.85rem;">UI Designer</p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    <a href="#about" class="scroll-down">
+      <span></span>
+      Scroll Down
+    </a>
+  </header>
+
+  <!-- ==========================================================================
+     ABOUT ME SECTION
+     ========================================================================== -->
+  <section class="about section" id="about">
+    <div class="container">
+      <h2 class="section-title fade-up">About Me</h2>
+      <p class="section-subtitle fade-up">Bridging the gap between robust software engineering and futuristic web interactions.</p>
+      
+      <div class="about-grid">
+        
+        <!-- Left Column: Training Highlight Card -->
+        <div class="about-card-wrapper fade-up">
+          <div class="training-highlight glass-panel">
+            <span class="training-badge">Intensive Training</span>
+            <h3 class="training-title">Java Full-Stack Program</h3>
+            <p class="training-subtitle">FIIT Institute of Technology, Chennai</p>
+            <p style="color: var(--color-text-secondary); font-size: 0.95rem; line-height: 1.6;">
+              Undergoing comprehensive training designed to cultivate clean coding structures, algorithmic thinking, and modern web application delivery.
+            </p>
+            <ul class="training-bullets">
+              <li><i class="fa-solid fa-circle-check"></i> Advanced Object-Oriented Java Coding</li>
+              <li><i class="fa-solid fa-circle-check"></i> Full Stack database mapping (SQL)</li>
+              <li><i class="fa-solid fa-circle-check"></i> React JS single-page architecture</li>
+              <li><i class="fa-solid fa-circle-check"></i> REST API building with Python & Flask</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Right Column: Details & Pillars -->
+        <div class="about-details">
+          <p class="about-intro-text fade-up">
+            I am a recent computer science graduate who views programming as an art. I enjoy turning complex problems into elegant, highly-optimized software solutions.
+          </p>
+          <p class="about-paragraph fade-up">
+            My passion started in university, exploring object-oriented systems and algorithm complexities. Through the FIIT Java Full-Stack training program, I have expanded my toolkit to build robust servers and responsive, animated frontends. I love matching premium SaaS interface trends with pixel-perfect layouts, responsive design, and smooth user interactions.
+          </p>
+          
+          <!-- Core Pillars Grid -->
+          <div class="about-features fade-up">
+            <div class="about-feature-card glass-card">
+              <div class="card-spotlight"></div>
+              <div class="feature-icon"><i class="fa-solid fa-code"></i></div>
+              <h3>Clean Code</h3>
+              <p>Writing highly readable, maintainable, and optimized OOP scripts.</p>
+            </div>
+            
+            <div class="about-feature-card glass-card">
+              <div class="card-spotlight"></div>
+              <div class="feature-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+              <h3>UI/UX Focus</h3>
+              <p>Designing modern, micro-interactive SaaS designs with neon aesthetics.</p>
+            </div>
+            
+            <div class="about-feature-card glass-card">
+              <div class="card-spotlight"></div>
+              <div class="feature-icon"><i class="fa-solid fa-bolt"></i></div>
+              <h3>Fast Learner</h3>
+              <p>Quickly adapting to new libraries, tools, and developer environments.</p>
+            </div>
+            
+            <div class="about-feature-card glass-card">
+              <div class="card-spotlight"></div>
+              <div class="feature-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+              <h3>Responsive</h3>
+              <p>Ensuring fluid layouts that fit perfectly on mobile, tablet, and ultra-wide screens.</p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+     SKILLS SECTION
+     ========================================================================== -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <h2 class="section-title fade-up">Skills & Stack</h2>
+      <p class="section-subtitle fade-up">My core language strengths, backend databases, and design packages that power my projects.</p>
+      
+      <div class="skills-container">
+        
+        <!-- Tabs Filters -->
+        <div class="skills-tabs fade-up">
+          <button class="tab-btn active" data-filter="all">All Skills</button>
+          <button class="tab-btn" data-filter="programming">Programming & Web</button>
+          <button class="tab-btn" data-filter="design">Creative Design</button>
+        </div>
+        
+        <!-- Skills Grid -->
+        <div class="skills-grid" id="skills-grid">
+          
+          <!-- Java -->
+          <div class="skill-card glass-card fade-up" data-category="programming">
+            <div class="card-spotlight"></div>
+            <div class="skill-header">
+              <div class="skill-icon-box">
+                <i class="fa-brands fa-java"></i>
+              </div>
+              <div class="skill-info">
+                <span class="skill-name">Java</span>
+                <span class="skill-level-text">Core & OOPs</span>
+              </div>
+            </div>
+            <div class="skill-progress-container">
+              <div class="skill-progress-bar">
+                <div class="skill-progress-fill" data-progress="80%"></div>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--color-text-muted);">
+                <span>Proficiency</span>
+                <span>80%</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- React JS -->
+          <div class="skill-card glass-card fade-up" data-category="programming">
+            <div class="card-spotlight"></div>
+            <div class="skill-header">
+              <div class="skill-icon-box">
+                <i class="fa-brands fa-react"></i>
+              </div>
+              <div class="skill-info">
+                <span class="skill-name">React JS</span>
+                <span class="skill-level-text">SPA Development</span>
+              </div>
+            </div>
+            <div class="skill-progress-container">
+              <div class="skill-progress-bar">
+                <div class="skill-progress-fill" data-progress="75%"></div>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--color-text-muted);">
+                <span>Proficiency</span>
+                <span>75%</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- JavaScript -->
+          <div class="skill-card glass-card fade-up" data-category="programming">
+            <div class="card-spotlight"></div>
+            <div class="skill-header">
+              <div class="skill-icon-box">
+                <i class="fa-brands fa-js"></i>
+              </div>
+              <div class="skill-info">
+                <span class="skill-name">JavaScript</span>
+                <span class="skill-level-text">ES6+ & Async</span>
+              </div>
+            </div>
+            <div class="skill-progress-container">
+              <div class="skill-progress-bar">
+                <div class="skill-progress-fill" data-progress="85%"></div>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--color-text-muted);">
+                <span>Proficiency</span>
+                <span>85%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- HTML5 -->
+          <div class="skill-card glass-card fade-up" data-category="programming">
+            <div class="card-spotlight"></div>
+            <div class="skill-header">
+              <div class="skill-icon-box">
+                <i class="fa-brands fa-html5"></i>
+              </div>
+              <div class="skill-info">
+                <span class="skill-name">HTML5</span>
+                <span class="skill-level-text">Semantic Structures</span>
+              </div>
+            </div>
+            <div class="skill-progress-container">
+              <div class="skill-progress-bar">
+                <div class="skill-progress-fill" data-progress="90%"></div>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--color-text-muted);">
+                <span>Proficiency</span>
+                <span>90%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- CSS3 -->
+          <div class="skill-card glass-card fade-up" data-category="programming">
+            <div class="card-spotlight"></div>
+            <div class="skill-header">
+              <div class="skill-icon-box">
+                <i class="fa-brands fa-css3-alt"></i>
+              </div>
+              <div class="skill-info">
+                <span class="skill-name">CSS3</span>
+                <span class="skill-level-text">Grid & Animations</span>
+              </div>
+            </div>
+            <div class="skill-progress-container">
+              <div class="skill-progress-bar">
+                <div class="skill-progress-fill" data-progress="85%"></div>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--color-text-muted);">
+                <span>Proficiency</span>
+                <span>85%</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Python -->
+          <div class="skill-card glass-card fade-up" data-category="programming">
+            <div class="card-spotlight"></div>
+            <div class="skill-header">
+              <div class="skill-icon-box">
+                <i class="fa-brands fa-python"></i>
+              </div>
+              <div class="skill-info">
+                <span class="skill-name">Python</span>
+                <span class="skill-level-text">Scripts & Logic</span>
+              </div>
+            </div>
+            <div class="skill-progress-container">
+              <div class="skill-progress-bar">
+                <div class="skill-progress-fill" data-progress="70%"></div>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--color-text-muted);">
+                <span>Proficiency</span>
+                <span>70%</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Flask -->
+          <div class="skill-card glass-card fade-up" data-category="programming">
+            <div class="card-spotlight"></div>
+            <div class="skill-header">
+              <div class="skill-icon-box">
+                <i class="fa-solid fa-pepper-hot"></i>
+              </div>
+              <div class="skill-info">
+                <span class="skill-name">Flask</span>
+                <span class="skill-level-text">REST APIs & Server</span>
+              </div>
+            </div>
+            <div class="skill-progress-container">
+              <div class="skill-progress-bar">
+                <div class="skill-progress-fill" data-progress="70%"></div>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--color-text-muted);">
+                <span>Proficiency</span>
+                <span>70%</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- SQL -->
+          <div class="skill-card glass-card fade-up" data-category="programming">
+            <div class="card-spotlight"></div>
+            <div class="skill-header">
+              <div class="skill-icon-box">
+                <i class="fa-solid fa-database"></i>
+              </div>
+              <div class="skill-info">
+                <span class="skill-name">SQL</span>
+                <span class="skill-level-text">Relational Databases</span>
+              </div>
+            </div>
+            <div class="skill-progress-container">
+              <div class="skill-progress-bar">
+                <div class="skill-progress-fill" data-progress="80%"></div>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--color-text-muted);">
+                <span>Proficiency</span>
+                <span>80%</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Photoshop -->
+          <div class="skill-card glass-card fade-up" data-category="design">
+            <div class="card-spotlight"></div>
+            <div class="skill-header">
+              <div class="skill-icon-box">
+                <i class="fa-solid fa-image"></i>
+              </div>
+              <div class="skill-info">
+                <span class="skill-name">Photoshop</span>
+                <span class="skill-level-text">Adobe Design Suite</span>
+              </div>
+            </div>
+            <div class="skill-progress-container">
+              <div class="skill-progress-bar">
+                <div class="skill-progress-fill" data-progress="75%"></div>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--color-text-muted);">
+                <span>Proficiency</span>
+                <span>75%</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- After Effects -->
+          <div class="skill-card glass-card fade-up" data-category="design">
+            <div class="card-spotlight"></div>
+            <div class="skill-header">
+              <div class="skill-icon-box">
+                <i class="fa-solid fa-film"></i>
+              </div>
+              <div class="skill-info">
+                <span class="skill-name">After Effects</span>
+                <span class="skill-level-text">VFX & Animation</span>
+              </div>
+            </div>
+            <div class="skill-progress-container">
+              <div class="skill-progress-bar">
+                <div class="skill-progress-fill" data-progress="65%"></div>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--color-text-muted);">
+                <span>Proficiency</span>
+                <span>65%</span>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+     PROJECTS SECTION
+     ========================================================================== -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <h2 class="section-title fade-up">Featured Projects</h2>
+      <p class="section-subtitle fade-up">A showcase of systems and layouts demonstrating backend integration and client interface standards.</p>
+      
+      <div class="projects-grid">
+        
+        <!-- Project 1: Strikingly Clone -->
+        <div class="project-card glass-card fade-up" id="project-strikingly">
+          <div class="card-spotlight"></div>
+          
+          <!-- Image Box with Parallax Cover -->
+          <div class="project-image-box">
+            <img src="assets/project_strikingly.png" alt="Strikingly Clone Website Mockup">
+            <div class="project-overlay"></div>
+            <div class="project-tags">
+              <span class="project-tag">React JS</span>
+              <span class="project-tag">JavaScript</span>
+              <span class="project-tag">HTML5/CSS3</span>
+            </div>
+          </div>
+          
+          <!-- Info Details -->
+          <div class="project-info-box">
+            <h3 class="project-title">
+              Strikingly Clone Website
+              <span style="font-size: 0.8rem; color: var(--color-violet-light); font-weight: 600; text-transform: uppercase;">Solo Project</span>
+            </h3>
+            <p class="project-desc">
+              Developed a fully responsive clone of the Strikingly landing page and site builder showcase, matching pixel-perfect spacing, fluid typography, and premium animations.
+            </p>
+            <ul class="project-bullets-list">
+              <li><i class="fa-solid fa-angle-right"></i> Constructed modern layout grids mimicking site-creation dashboards.</li>
+              <li><i class="fa-solid fa-angle-right"></i> Designed customizable responsive UI sections adjusting dynamically to screen widths.</li>
+              <li><i class="fa-solid fa-angle-right"></i> Implemented lightweight transition scripts for intuitive scrolling behavior.</li>
+            </ul>
+
+          </div>
+        </div>
+        
+        <!-- Project 2: Library Management System -->
+        <div class="project-card glass-card fade-up" id="project-library">
+          <div class="card-spotlight"></div>
+          
+          <!-- Image Box with Parallax Cover -->
+          <div class="project-image-box">
+            <img src="assets/project_library.jpg" alt="Library Management System Dashboard Mockup">
+            <div class="project-overlay"></div>
+            <div class="project-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">Flask</span>
+              <span class="project-tag">SQL</span>
+              <span class="project-tag">HTML5/CSS3</span>
+            </div>
+          </div>
+          
+          <!-- Info Details -->
+          <div class="project-info-box">
+            <h3 class="project-title">
+              Library Management System
+              <span style="font-size: 0.8rem; color: var(--color-violet-light); font-weight: 600; text-transform: uppercase;">College Project</span>
+            </h3>
+            <p class="project-desc">
+              A dual-ended administrative system built to automate book cataloging, library card registration, issue/return requests, and real-time stock balances.
+            </p>
+            <ul class="project-bullets-list">
+              <li><i class="fa-solid fa-angle-right"></i> Set up custom SQL tables to manage data relationships between books and members.</li>
+              <li><i class="fa-solid fa-angle-right"></i> Programmed Flask backend controller routes for transaction record-keeping.</li>
+              <li><i class="fa-solid fa-angle-right"></i> Coded clean search fields enabling rapid querying across book titles or IDs.</li>
+            </ul>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+     EXPERIENCE & JOURNEY TIMELINE
+     ========================================================================== -->
+  <section class="journey section" id="journey">
+    <div class="container">
+      <h2 class="section-title fade-up">My Journey</h2>
+      <p class="section-subtitle fade-up">A visual timeline documenting my academic background, technical training, and pursuit of certifications.</p>
+      
+      <div class="timeline-wrapper">
+        
+        <!-- Timeline Center Line -->
+        <div class="timeline-line">
+          <div class="timeline-line-filled" id="timeline-scroll-progress"></div>
+        </div>
+        
+        <div class="timeline-items">
+          
+          <!-- Item 1: Java Full Stack Training -->
+          <div class="timeline-item active">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content-box glass-card">
+              <div class="card-spotlight"></div>
+              <span class="timeline-date">Pursuing</span>
+              <h3 class="timeline-card-title">Java Full-Stack Course</h3>
+              <p class="timeline-card-subtitle">FIIT Institute of Technology, Chennai</p>
+              <p class="timeline-card-desc">
+                Currently specializing in enterprise architecture, advanced Java mechanisms (multi-threading, inheritance architectures), front-end SPA modeling using React, and server systems connection.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Item 2: B.Sc Computer Science -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content-box glass-card">
+              <div class="card-spotlight"></div>
+              <span class="timeline-date">2022 - 2025</span>
+              <h3 class="timeline-card-title">Bachelor of Computer Science</h3>
+              <p class="timeline-card-subtitle">St.Thomas College, Chennai</p>
+              <p class="timeline-card-desc">
+                Completed my core computer science studies, covering data structures, relational database systems, theory of computation, and web programming basics. Graduated with an aggregate score of 65%.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Item 3: 12th Grade -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content-box glass-card">
+              <div class="card-spotlight"></div>
+              <span class="timeline-date">Passed Out 2022</span>
+              <h3 class="timeline-card-title">Higher Secondary Education (12th)</h3>
+              <p class="timeline-card-subtitle">Subbarayan School, Chennai</p>
+              <p class="timeline-card-desc">
+                Finished my high school education, focusing on mathematics and science concepts that set the base for my engineering journey.
+              </p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+     STATISTICS COUNTER
+     ========================================================================== -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        
+        <!-- Stat 1: Tech stack -->
+        <div class="stat-item fade-up">
+          <div class="stat-number" data-target="10">0<span>+</span></div>
+          <div class="stat-label">Technologies Mastered</div>
+        </div>
+        
+        <!-- Stat 2: Projects completed -->
+        <div class="stat-item fade-up">
+          <div class="stat-number" data-target="5">0<span>+</span></div>
+          <div class="stat-label">Projects Completed</div>
+        </div>
+        
+        <!-- Stat 3: Training Progress -->
+        <div class="stat-item fade-up">
+          <div class="stat-number" data-target="85">0<span>%</span></div>
+          <div class="stat-label">Full Stack Training Progress</div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+     CONTACT SECTION
+     ========================================================================== -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <h2 class="section-title fade-up">Get In Touch</h2>
+      <p class="section-subtitle fade-up">Have a project query, an internship role, or want to discuss full-stack opportunities? Reach out below.</p>
+      
+      <div class="contact-grid">
+        
+        <!-- Left Column: Contact details -->
+        <div class="contact-info-panel fade-up">
+          
+          <!-- Card: Email -->
+          <a href="mailto:mohansvenkat44@gmail.com" class="contact-card-simple glass-card">
+            <div class="card-spotlight"></div>
+            <div class="contact-icon-wrapper">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="contact-meta">
+              <span class="contact-meta-label">Mail Me</span>
+              <span class="contact-meta-val">mohansvenkat44@gmail.com</span>
+            </div>
+          </a>
+          
+          <!-- Card: Phone -->
+          <a href="tel:+917305477132" class="contact-card-simple glass-card">
+            <div class="card-spotlight"></div>
+            <div class="contact-icon-wrapper">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div class="contact-meta">
+              <span class="contact-meta-label">Call Me</span>
+              <span class="contact-meta-val">+91 7305477132</span>
+            </div>
+          </a>
+          
+          <!-- Card: Location -->
+          <div class="contact-card-simple glass-card">
+            <div class="card-spotlight"></div>
+            <div class="contact-icon-wrapper">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="contact-meta">
+              <span class="contact-meta-label">Location</span>
+              <span class="contact-meta-val">Chennai, TN, India</span>
+            </div>
+          </div>
+          
+          <!-- Connect Section -->
+          <div style="display: flex; flex-direction: column; gap: 16px;">
+            <h3 class="socials-title">Connect with me</h3>
+            <div class="social-icons-row">
+              <a href="https://github.com/Venkateshoffl" target="_blank" class="social-circle magnet-btn" aria-label="GitHub Profile">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="https://linkedin.com" target="_blank" class="social-circle magnet-btn" aria-label="LinkedIn Profile">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="mailto:mohansvenkat44@gmail.com" class="social-circle magnet-btn" aria-label="Gmail / Email Me">
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+            </div>
+          </div>
+          
+        </div>
+        
+        <!-- Right Column: Interactive Form -->
+        <div class="contact-form-wrapper fade-up">
+          <div class="contact-form-card glass-panel">
+            <h3 class="form-title">Send a Message</h3>
+            <p class="form-desc">I will respond to your inquiry within 24 business hours.</p>
+            
+            <form id="contact-form" autocomplete="off">
+              <div class="form-group-row">
+                <div class="form-group">
+                  <label for="form-name" class="form-label">Your Name</label>
+                  <input type="text" id="form-name" name="name" class="form-control" placeholder="Enter name" required>
+                  <div class="form-input-focus-line"></div>
+                </div>
+                <div class="form-group">
+                  <label for="form-email" class="form-label">Email Address</label>
+                  <input type="email" id="form-email" name="email" class="form-control" placeholder="name@email.com" required>
+                  <div class="form-input-focus-line"></div>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="form-subject" class="form-label">Subject</label>
+                <input type="text" id="form-subject" name="subject" class="form-control" placeholder="Discussion topic" required>
+                <div class="form-input-focus-line"></div>
+              </div>
+              
+              <div class="form-group" style="margin-bottom: 30px;">
+                <label for="form-message" class="form-label">Message Details</label>
+                <textarea id="form-message" name="message" class="form-control" placeholder="Write message here..." required></textarea>
+                <div class="form-input-focus-line"></div>
+              </div>
+              
+              <div class="submit-btn-row">
+                <button type="submit" class="btn btn-primary magnet-btn" style="padding: 14px 40px;" id="form-submit-btn">
+                  Send Message <i class="fa-solid fa-paper-plane" style="font-size: 0.85rem;"></i>
+                </button>
+              </div>
+            </form>
+            
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+     FOOTER SECTION
+     ========================================================================== -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-copy">
+        &copy; 2026 Venkatesan K. Built with premium dark-violet glass aesthetics.
+      </div>
+      <a href="#home" class="footer-logo">
+        VK<span>.</span>
+      </a>
+      <div class="back-to-top magnet-btn" id="back-to-top" aria-label="Scroll to top">
+        <i class="fa-solid fa-arrow-up"></i>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Contact success toast notification -->
+  <div class="toast-msg" id="success-toast">
+    <div class="toast-icon">
+      <i class="fa-solid fa-circle-check"></i>
+    </div>
+    <div>
+      <h4 style="margin: 0 0 2px 0; font-size: 0.95rem; color: #FFFFFF;">Success!</h4>
+      <p style="margin: 0; font-size: 0.8rem; color: var(--color-text-secondary);">Your message has been sent successfully.</p>
+    </div>
+  </div>
+
+  <!-- Contact error toast notification -->
+  <div class="toast-msg" id="error-toast" style="border-color: #EF4444; box-shadow: 0 0 20px rgba(239, 68, 68, 0.45);">
+    <div class="toast-icon" style="color: #EF4444;">
+      <i class="fa-solid fa-circle-xmark"></i>
+    </div>
+    <div>
+      <h4 style="margin: 0 0 2px 0; font-size: 0.95rem; color: #FFFFFF;">Error!</h4>
+      <p style="margin: 0; font-size: 0.8rem; color: var(--color-text-secondary);">Something went wrong. Please try again.</p>
+    </div>
+  </div>
+
+  <!-- Interactive Project Modal (Visual Mock Demo) -->
+  <div id="project-modal" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(3, 0, 20, 0.85); backdrop-filter: blur(10px); z-index: 10000; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.4s ease;">
+    <div class="glass-panel" style="width: 90%; max-width: 800px; padding: 40px; position: relative; border-color: rgba(139, 92, 246, 0.3); box-shadow: var(--neon-glow-strong);">
+      <button id="modal-close-btn" style="position: absolute; top: 20px; right: 20px; background: none; border: none; color: var(--color-text-secondary); font-size: 1.5rem; cursor: pointer; transition: var(--transition-fast);" aria-label="Close Modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div id="modal-content">
+        <!-- Will be populated dynamically in index.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Libraries CDNs -->
+  <!-- GSAP Animation Engine -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <!-- GSAP ScrollTrigger Plugin -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <!-- Three.js (For 3D floating background spheres) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <!-- Canvas Confetti Library -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.umd.min.js"></script>
+  <!-- Lenis Smooth Scrolling Library -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+
+  <!-- Core JavaScript -->
+  <script type="module" src="index.js"></script>
+
+</body>
+</html>
