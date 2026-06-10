@@ -582,8 +582,25 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Floating Glass Cards around Profile */
-.floating-widget {
+.floating-widget-wrapper {
   position: absolute;
+  z-index: 12;
+  animation: float-widget 6s ease-in-out infinite;
+}
+
+.floating-widget-wrapper.widget-1 {
+  top: -8%;
+  left: -22%;
+  animation-delay: 0s;
+}
+
+.floating-widget-wrapper.widget-2 {
+  bottom: -5%;
+  right: -18%;
+  animation-delay: 3s;
+}
+
+.floating-widget {
   padding: 12px 18px;
   border-radius: 12px;
   font-size: 0.85rem;
@@ -593,21 +610,16 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   gap: 10px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-  animation: float-widget 6s ease-in-out infinite;
-  z-index: 12;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
-.widget-1 {
-  top: 15%;
-  left: -10%;
-  animation-delay: 0s;
+.floating-widget:hover {
+  transform: scale(1.08);
+  border-color: rgba(139, 92, 246, 0.6) !important;
+  box-shadow: 0 15px 30px rgba(139, 92, 246, 0.35);
 }
 
-.widget-2 {
-  bottom: 20%;
-  right: -5%;
-  animation-delay: 3s;
-}
 
 .widget-icon {
   width: 32px;
@@ -1688,6 +1700,16 @@ textarea.form-control {
   .custom-cursor-outline {
     display: none; /* Hide custom cursor on mobile */
   }
+  
+  .floating-widget-wrapper.widget-1 {
+    top: -6%;
+    left: -12%;
+  }
+  
+  .floating-widget-wrapper.widget-2 {
+    bottom: -3%;
+    right: -10%;
+  }
 }
 
 /* Extra Small Devices */
@@ -1711,13 +1733,16 @@ textarea.form-control {
     border-radius: 20px;
   }
   
-  .widget-1 {
-    left: -5%;
+  .floating-widget-wrapper.widget-1 {
+    top: -5%;
+    left: -2%;
   }
   
-  .widget-2 {
+  .floating-widget-wrapper.widget-2 {
+    bottom: -4%;
     right: -2%;
   }
+
   
   .about-features {
     grid-template-columns: 1fr;
